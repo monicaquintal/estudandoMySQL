@@ -11,7 +11,7 @@
 <a href="#aula01">Aula 01: O que é MySQL?</a><br>
 <a href="#aula02">Aula 02: Um pouco mais sobre SQL.</a><br>
 <a href="#aula03">Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</a><br>
-<a href="#aula04">Aula 04: .</a><br>
+<a href="#aula04">Aula 04: Criando e excluindo Bancos de Dados.</a><br>
 <a href="#aula05">Aula 05: .</a><br>
 
 
@@ -44,27 +44,49 @@ A `Linguagem SQL` é adotada como linguagem padrão nos principais BDs relaciona
 Pode ser dividida em cinco subcategorias e instruções com objetivos específicos:
 
 1. DDL - Data Definition Language 
-  - Linguagem de definição de dados. 
-  - permite implementar a modelagem de dados - criar, alterar e remover estruturas de dados.
+    - Linguagem de definição de dados. 
+    - permite implementar a modelagem de dados - criar, alterar e remover estruturas de dados.
 
 2. DML - Data Manipulation Language 
-  - Linguagem de Manipulação de Dados.
-  - Permite inclusão, alteração e remoção dos registros dentro das estruturas de dados.
+    - Linguagem de Manipulação de Dados.
+    - Permite inclusão, alteração e remoção dos registros dentro das estruturas de dados.
 
 3. DCL - Data Control Language 
-  - Linguagem de Controle de Dados.
-  - Possibilita gerenciar acesso por parte de usuários externos ao SGBD.
+    - Linguagem de Controle de Dados.
+    - Possibilita gerenciar acesso por parte de usuários externos ao SGBD.
 
 4. DTL - Data Transaction Language 
-  - Linguagem de Transação de Dados.
-  - Permite efetivar ou cancelar as transações junto ao SGBD.
+    - Linguagem de Transação de Dados.
+    - Permite efetivar ou cancelar as transações junto ao SGBD.
 
 5. DQL - Data Query Language 
-  - Linguagem de Consulta de Dados 
-  - permite recuperar dados através do estabelecimento de cláusulas, de operações lógicas, relacionais ou de funções de agragação.
+    - Linguagem de Consulta de Dados 
+    - permite recuperar dados através do estabelecimento de cláusulas, de operações lógicas, relacionais ou de funções de agragação.
 
 <hr>
 
 <div id="aula03" align="center">
 <h2>Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</h2>
+</div>
+
+`PHPMyAdmin` é uma aplicação web, escrita em PHP, que serve para acessar e administrar o Banco de Dados MySQL. **É uma interface para o SGBD do MySQL**, acessada através do navegador/browser.
+
+### Como acessar PHPMyAdmin?
+
+1. Acessar o XAMPP.
+2. Subir/startar o serviço do Apache (Start) - Porta 80.
+3. Subir/startar o serviço do MySQL (Start) - Porta 3306.
+4. Acessar no navegador: `localhost/phpmyadmin`.
+
+### Apresentação do PHPMyAdmin:
+
+- Na barra à esquerda, há a relação dos BDs existentes em nosso computador e gerenciado pelo SGBD do MySQL.
+- À direita, informações a respito do servidor do BD e do servidor web, e alguns links para documentação e informações do PHPMyAdmin.
+
+~~~
+No curso, trabalhamos com MariDB, uma extensão do MySQL, uma branch open source!
+~~~
+
+<div id="aula04" align="center">
+<h2>Aula 04: Criando e excluindo Bancos de Dados.</h2>
 </div>
