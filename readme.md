@@ -12,7 +12,12 @@
 <a href="#aula02">Aula 02: Um pouco mais sobre SQL.</a><br>
 <a href="#aula03">Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</a><br>
 <a href="#aula04">Aula 04: Criando e excluindo Bancos de Dados.</a><br>
-<a href="#aula05">Aula 05: .</a><br>
+<a href="#aula05">Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</a><br>
+<a href="#aula06">Aula 06: .</a><br>
+<a href="#aula07">Aula 07: .</a><br>
+<a href="#aula08">Aula 08: .</a><br>
+<a href="#aula09">Aula 09: .</a><br>
+<a href="#aula10">Aula 10: .</a><br>
 
 
 </div>
@@ -84,9 +89,73 @@ Pode ser dividida em cinco subcategorias e instruções com objetivos específic
 - À direita, informações a respito do servidor do BD e do servidor web, e alguns links para documentação e informações do PHPMyAdmin.
 
 ~~~
-No curso, trabalhamos com MariDB, uma extensão do MySQL, uma branch open source!
+No curso, trabalhamos com MariaDB, uma extensão do MySQL, uma branch open source!
 ~~~
 
 <div id="aula04" align="center">
 <h2>Aula 04: Criando e excluindo Bancos de Dados.</h2>
 </div>
+
+Bancos de dados são coleções organizadas de dados, que se relacionam de algum modo; consiste em agrupar registros de um domínio específico.
+
+***Não existe um jeito certo e único de se criar um banco de dados***; depende do nível de abstração do assunto!
+
+<br>
+
+### No PHPMyAdmin:
+
+Há duas formas de trabalho, disponíveis em qualquer client que se comunique com um SGBD:
+1. instruções SQL.
+2. através de interface gráfica.
+
+<br>
+
+### Instruções/Comandos SQL:
+
+<br>
+
+A) Para criar um BD (DDL): 
+
+1. Comando `CREATE DATABASE nome_do_bd`. Exemplo:
+
+~~~sql
+CREATE DATABASE db_curso_web;
+~~~
+
+**Importante:** não utilizar caracteres especiais ou espaços quando for definir o nome do BD.
+
+2. Clicar em Executar/Continuar.
+
+<br>
+
+B) Para remover um BD (DDL): 
+
+1. Comando `DROP DATABASE nome_do_bd`. Exemplo:
+
+~~~sql
+DROP DATABASE db_curso_web;
+~~~
+
+2. Clicar em Executar/Continuar.
+
+**Importante:** cuidado com os demais bancos de dados, porque contém informações importantes para o gerenciamento do próprio MySQL! Com exceção do banco de dados "test", evitar mexer nos demais BDs.
+
+<br>
+
+### Interface visual:
+
+<br>
+
+Para criar um BD:
+1. Clicar em New/Novo.
+2. Inserir o nome do BD.
+3. Clicar em Criar.
+
+Para excluir um BD:
+1. Menu Operações.
+2. Clicar em "Apagar a Base de Dados".
+
+<div id="aula05" align="center">
+<h2>Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</h2>
+</div>
+
