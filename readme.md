@@ -13,7 +13,7 @@
 <a href="#aula03">Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</a><br>
 <a href="#aula04">Aula 04: Criando e excluindo Bancos de Dados.</a><br>
 <a href="#aula05">Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</a><br>
-<a href="#aula06">Aula 06: .</a><br>
+<a href="#aula06">Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</a><br>
 <a href="#aula07">Aula 07: .</a><br>
 <a href="#aula08">Aula 08: .</a><br>
 <a href="#aula09">Aula 09: .</a><br>
@@ -112,8 +112,6 @@ Há duas formas de trabalho, disponíveis em qualquer client que se comunique co
 
 ### Instruções/Comandos SQL:
 
-<br>
-
 A) Para criar um BD (DDL): 
 
 1. Comando `CREATE DATABASE nome_do_bd`. Exemplo:
@@ -157,5 +155,49 @@ Para excluir um BD:
 
 <div id="aula05" align="center">
 <h2>Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</h2>
+</div>
+
+### Tabelas:
+
+- Estruturas "semelhantes" a planilhas.
+- Podem ser entendidas como unidades de armazenamento.
+- São construídas com um número **finito de colunas**, e número **indefinido de linhas**!
+- As informações cadastradas em aplicações são processados por uma linguagem de programação (como PHP) e, posteriormente, os dados processados podem ser inseridos como novos registros dentro de tabelas em BDs.
+- São repositórios que qualificam os atributos de cada registro armazenado! Ou seja, além dos dados propriamente ditos de cada registro, associa metadados (como tipos e subtipos), que podem ser usados para controlar a integridade da informação ou otimizar pesquisas.
+
+### Tipos de dados:
+
+- Importantes para a definição de tabelas.
+- Cada coluna de uma tabela é responsável pelo armazenamento de um tipo de dado específico, que deve ser definido no momento de criação da tabela!
+- Exemplo:
+
+<div align="center">
+<img src="./assets/tipos_de_dados.png" width="70%">
+</div>
+<br>
+
+- Alguns dos principais tipos de dados (e seus subtipos) são:
+
+a) Campos de texto:
+
+- `text`: tamanho variável que armazena uma grande quantidade de caracteres.
+- `varchar`: tamanho variável que armazena de 0 até 255 caracteres (descrições textuais mais curtas).
+- `char`: tamanho fixo que armazena de 0 até 255 caracteres.
+
+b) Campos numéricos:
+
+- `int`: valores numéricos inteiros, tanto positivos quanto negativos.
+- `float`: valores numéricos fracionados, tanto positivos quanto negativos.
+
+c) Campos de data e hora:
+
+- `date`: data no formato YYYY/mm/dd.
+- `time`: hora.
+- `datetime`: combinação entre date e time em um mesmo campo.
+
+> Indicar o tipo de campo corretamente permite trabalhar com funções nativas do SGBD!
+
+<div id="aula06" align="center">
+<h2>Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</h2>
 </div>
 
