@@ -17,7 +17,17 @@
 <a href="#aula07">Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</a><br>
 <a href="#aula08">Aula 08: Editando nome de tabelas.</a><br>
 <a href="#aula09">Aula 09: Incluindo, editando e removendo colunas de tabelas.</a><br>
-<a href="#aula10">Aula 10: .</a><br>
+<a href="#aula10">Aula 10: INSERT - Inserindo dados em tabela.</a><br>
+<a href="#aula11">Aula 11: .</a><br>
+<a href="#aula12">Aula 12: .</a><br>
+<a href="#aula13">Aula 13: .</a><br>
+<a href="#aula14">Aula 14: .</a><br>
+<a href="#aula15">Aula 15: .</a><br>
+<a href="#aula16">Aula 16: .</a><br>
+<a href="#aula17">Aula 17: .</a><br>
+<a href="#aula18">Aula 18: .</a><br>
+<a href="#aula19">Aula 19: .</a><br>
+<a href="#aula20">Aula 20: .</a><br>
 
 
 </div>
@@ -283,5 +293,67 @@ RENAME TABLE <nome_atual> TO <nome_novo>;
 
 <div id="aula09" align="center">
 <h2>Aula 09: Incluindo, editando e removendo colunas de tabelas.</h2>
+</div>
+
+### 1. Através da interface visual:
+
+a) Incluindo colunas:
+- clicar no botão que expande os recursos da tabela.
+- expendir as opções de colunas.
+- clicar em "New".
+- inserir os dados da nova Coluna.
+- clicar em Guardar.
+
+b) Editando a coluna:
+- clicar no nome da tabela;
+- em Estrutura, clicar na opção "Muda" da coluna que queremos alterar (ou diretamente pela lista de colunas no menu esquerdo);
+- fazer a alteração e clicar em "Guardar".
+
+c) Deletando coluna:
+- clicar no nome da tabela;
+- em Estrutura, clicar na opção "Eliminar" da coluna que queremos excluir (ou diretamente pela lista de colunas no menu esquerdo);
+- clicar em Ok.
+
+<br>
+
+### 2. Linguagem SQL:
+
+Sintaxe:
+~~~sql
+ALTER TABLE <comando>;
+~~~
+
+- `ADD`: permite a inclusão de uma nova coluna em uma tabela.
+- `CHANGE`: permite a alteração do nome de uma coluna e de suas propriedades, como o tipo.
+- `DROP`: permite a remoção de uma coluna da tabela.
+
+a) Inclusão de coluna:
+
+~~~sql
+ALTER TABLE nome_da_tabela ADD COLUMN nome_da_coluna <TIPO_DE_DADO> <PARÂMETRO>;
+~~~
+
+b) Alteração de coluna:
+
+~~~sql
+ALTER TABLE nome_da_tabela CHANGE nome_da_coluna <DADOS_A_SEREM_MODIFICADOS>;
+
+/* caso queira modificar o nome: */
+ALTER TABLE nome_da_tabela CHANGE nome_antigo_da_coluna novo_nome_da_coluna <DEMAIS_DADOS_A_SEREM_MODIFICADOS>;
+
+/* caso queira manter o nome: */
+ALTER TABLE nome_da_tabela CHANGE nome_da_coluna nome_da_coluna <DADOS_A_SEREM_MODIFICADOS>;
+
+/* se mudarmos apenas o nome, ainda assim devemos indicar o tipo na sequência, sem precisas do parâmetro!*/
+~~~
+
+c) Exclusão de coluna:
+
+~~~sql
+ALTER TABLE nome_da_tabela DROP nome_da_coluna;
+~~~
+
+<div id="aula10" align="center">
+<h2>Aula 10: INSERT - Inserindo dados em tabela.</h2>
 </div>
 
