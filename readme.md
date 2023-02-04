@@ -14,7 +14,7 @@
 <a href="#aula04">Aula 04: Criando e excluindo Bancos de Dados.</a><br>
 <a href="#aula05">Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</a><br>
 <a href="#aula06">Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</a><br>
-<a href="#aula07">Aula 07: .</a><br>
+<a href="#aula07">Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</a><br>
 <a href="#aula08">Aula 08: .</a><br>
 <a href="#aula09">Aula 09: .</a><br>
 <a href="#aula10">Aula 10: .</a><br>
@@ -88,9 +88,7 @@ Pode ser dividida em cinco subcategorias e instruções com objetivos específic
 - Na barra à esquerda, há a relação dos BDs existentes em nosso computador e gerenciado pelo SGBD do MySQL.
 - À direita, informações a respito do servidor do BD e do servidor web, e alguns links para documentação e informações do PHPMyAdmin.
 
-~~~
-No curso, trabalhamos com MariaDB, uma extensão do MySQL, uma branch open source!
-~~~
+> No curso, trabalhamos com MariaDB, uma extensão do MySQL, uma branch open source!
 
 <div id="aula04" align="center">
 <h2>Aula 04: Criando e excluindo Bancos de Dados.</h2>
@@ -201,3 +199,49 @@ c) Campos de data e hora:
 <h2>Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</h2>
 </div>
 
+Objetivo: criar uma tabela que receba registros de cursos (DDL).
+
+Ao acessar o PHPMyAdmin, há duas opções para criar a tabela: através da interface visual ou da Linguagem SQL.
+
+1. através da interface: 
+
+- para criar uma tabela:
+    - clicar no BD;
+    - definir o nome da tabela;
+    - inserir n°,. de colunas;
+    - definir o nome de cada uma das colunas e os tipos de dados (**obs: none é o oposto de null**);
+    - clicar em "Guardar".
+
+- para remover uma tabela:
+    - clicar sobre a tabela;
+    - menu operações;
+    - opção "delete the table".
+
+<br>
+2. através da linguagem SQL: 
+
+- para criar uma tabela:
+
+~~~sql
+CREATE TABLE tb_cursos (
+    id_curso int not null,
+    imagem_curso varchar(100) not null,
+    nome_curso char(50) not null,
+    resumo text null,
+    data_cadastro datetime not null,
+    ativo boolean default true,
+    investimento float(5, 2) default 0
+);
+
+/*float(n° dígitos, qtdd dígitos correspondentes à fração)*/
+~~~
+
+- para excluir uma tabela:
+
+~~~sql
+DROP TABLE tb_cursos;
+~~~
+
+<div id="aula07" align="center">
+<h2>Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</h2>
+</div>
