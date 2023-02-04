@@ -16,7 +16,7 @@
 <a href="#aula06">Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</a><br>
 <a href="#aula07">Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</a><br>
 <a href="#aula08">Aula 08: Editando nome de tabelas.</a><br>
-<a href="#aula09">Aula 09: .</a><br>
+<a href="#aula09">Aula 09: Incluindo, editando e removendo colunas de tabelas.</a><br>
 <a href="#aula10">Aula 10: .</a><br>
 
 
@@ -262,10 +262,26 @@ DROP TABLE tb_cursos;
 
 Exemplo:
 - Dado: MONICA
-- Char (10 posições): <u>M</u> <u>O</u> <u>N</u> <u>I</u> <u>C</u> <u>A</u> _ _ _ _
-- Varchar (10 posições): <u>M</u> <u>O</u> <u>N</u> <u>I</u> <u>C</u> <u>A</u>
+- Char (10 posições): M O N I C A _ _ _ _
+- Varchar (10 posições): M O N I C A
 
 <div id="aula08" align="center">
 <h2>Aula 08: Editando nome de tabelas.</h2>
+</div>
+
+a) Utilizando recursos viduais:
+- selecionar a tabela;
+- clicar em operações;
+- em "opções da tabela", na opção "renomeie a tabela para", inserir o novo nome;
+- clicar em Executar/Continuar.
+
+b) Intrução DDL do MySQL:
+~~~sql
+RENAME TABLE <nome_atual> TO <nome_novo>;
+/* em seguida, atualizar a aplicação (botão Reload)!
+~~~
+
+<div id="aula09" align="center">
+<h2>Aula 09: Incluindo, editando e removendo colunas de tabelas.</h2>
 </div>
 
