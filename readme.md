@@ -15,7 +15,7 @@
 <a href="#aula05">Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</a><br>
 <a href="#aula06">Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</a><br>
 <a href="#aula07">Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</a><br>
-<a href="#aula08">Aula 08: .</a><br>
+<a href="#aula08">Aula 08: Editando nome de tabelas.</a><br>
 <a href="#aula09">Aula 09: .</a><br>
 <a href="#aula10">Aula 10: .</a><br>
 
@@ -245,3 +245,27 @@ DROP TABLE tb_cursos;
 <div id="aula07" align="center">
 <h2>Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</h2>
 </div>
+
+1. CHAR:
+
+- tamanho **fixo** em disco.
+- todos os espaços relativos à quantidade de caracteres definidos ficam reservados no disco, independente de inserirmos ou não textos com este número de caracteres.
+- vantagem: mais rápido para pesquisas.
+- desvantagem: quanto mal utilizdo, pode reservar espaço em disco de forma desnecessária.
+
+2. VARCHAR:
+
+- tamanho **variável** em disco.
+- possui a inteligência de reservar apenas a quantidade de caracteres utilizados para aquela string (ocupa menos espaço no BD).
+- vantagem: por ser de tamanho variável, ocupa apenas o espaço necessário em disco.
+- desvantagem: por ser de um tamanho variável, possui um metadado com uma instrução de finalização do texto, o que produz, em relação ao CHAR, maior lentidão em pesquisas.
+
+Exemplo:
+- Dado: MONICA
+- Char (10 posições): <u>M</u> <u>O</u> <u>N</u> <u>I</u> <u>C</u> <u>A</u> _ _ _ _
+- Varchar (10 posições): <u>M</u> <u>O</u> <u>N</u> <u>I</u> <u>C</u> <u>A</u>
+
+<div id="aula08" align="center">
+<h2>Aula 08: Editando nome de tabelas.</h2>
+</div>
+
