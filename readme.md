@@ -18,7 +18,7 @@
 <a href="#aula08">Aula 08: Editando nome de tabelas.</a><br>
 <a href="#aula09">Aula 09: Incluindo, editando e removendo colunas de tabelas.</a><br>
 <a href="#aula10">Aula 10: INSERT - Inserindo dados em tabela.</a><br>
-<a href="#aula11">Aula 11: .</a><br>
+<a href="#aula11">Aula 11: SELECT - Consultando dados.</a><br>
 <a href="#aula12">Aula 12: .</a><br>
 <a href="#aula13">Aula 13: .</a><br>
 <a href="#aula14">Aula 14: .</a><br>
@@ -339,7 +339,7 @@ b) Alteração de coluna:
 ALTER TABLE nome_da_tabela CHANGE nome_da_coluna <DADOS_A_SEREM_MODIFICADOS>;
 
 /* caso queira modificar o nome: */
-ALTER TABLE nome_da_tabela CHANGE nome_antigo_da_coluna novo_nome_da_coluna <DEMAIS_DADOS_A_SEREM_MODIFICADOS>;
+ALTER TABLE nome_da_tabela CHANGE nome_antigo_da_coluna novo_nome_da_coluna <DEMAIS_DADOS_A_MODIFICAR>;
 
 /* caso queira manter o nome: */
 ALTER TABLE nome_da_tabela CHANGE nome_da_coluna nome_da_coluna <DADOS_A_SEREM_MODIFICADOS>;
@@ -357,3 +357,23 @@ ALTER TABLE nome_da_tabela DROP nome_da_coluna;
 <h2>Aula 10: INSERT - Inserindo dados em tabela.</h2>
 </div>
 
+### 1. Através da interface visual:
+- clicar no BD e tabela desejados;
+- clicar em "Inserir";
+- preencher o formulário com os dados;
+- clicar em "Executar".
+- clicando na tabela, poderemos verificar os registros realizados.
+
+<br>
+
+### 2. Linguagem SQL:
+
+~~~sql
+INSERT INTO nome_da_tabela (coluna1, coluna2, coluna3) VALUES (valor_coluna1, valor_coluna2, valor_coluna3);
+~~~
+
+<div id="aula11" align="center">
+<h2>Aula 11: SELECT - Consultando dados.</h2>
+</div>
+
+Aula 10: INSERT - Inserindo dados em tabela.
