@@ -19,7 +19,7 @@
 <a href="#aula09">Aula 09: Incluindo, editando e removendo colunas de tabelas.</a><br>
 <a href="#aula10">Aula 10: INSERT - Inserindo dados em tabela.</a><br>
 <a href="#aula11">Aula 11: SELECT - Consultando dados.</a><br>
-<a href="#aula12">Aula 12: .</a><br>
+<a href="#aula12">Aula 12: Filtrando registros (WHERE).</a><br>
 <a href="#aula13">Aula 13: .</a><br>
 <a href="#aula14">Aula 14: .</a><br>
 <a href="#aula15">Aula 15: .</a><br>
@@ -369,11 +369,35 @@ ALTER TABLE nome_da_tabela DROP nome_da_coluna;
 ### 2. Linguagem SQL:
 
 ~~~sql
-INSERT INTO nome_da_tabela (coluna1, coluna2, coluna3) VALUES (valor_coluna1, valor_coluna2, valor_coluna3);
+INSERT INTO nome_da_tabela (coluna1, coluna2, coluna3) VALUES (valor_col1, valor_col2, valor_col3);
 ~~~
 
 <div id="aula11" align="center">
 <h2>Aula 11: SELECT - Consultando dados.</h2>
 </div>
 
-Aula 10: INSERT - Inserindo dados em tabela.
+Como recuperar os registros inseridos? (DML)
+
+### 1. Através da interface visual:
+- basta clicar sobre a tabela!
+
+<br>
+
+### 2. Linguagem SQL:
+
+~~~sql
+SELECT <colunas> FROM <tabela>;
+~~~
+
+Podemos utilizar o `caractere coringa: *` para selecionar todos os campos da tabela, como a seguir:
+
+~~~sql
+SELECT * FROM <tabela>;
+~~~
+
+Atentar-se ao tamanho do BD e quantidade de dados antes de utiliza-lo - verificar se vale a pena!
+
+<div id="aula12" align="center">
+<h2>Aula 12: Filtrando registros (WHERE).</h2>
+</div>
+
