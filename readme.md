@@ -20,7 +20,7 @@
 <a href="#aula10">Aula 10: INSERT - Inserindo dados em tabela.</a><br>
 <a href="#aula11">Aula 11: SELECT - Consultando dados.</a><br>
 <a href="#aula12">Aula 12: Filtrando registros (WHERE).</a><br>
-<a href="#aula13">Aula 13: .</a><br>
+<a href="#aula13">Aula 13: Populando o banco de dados com registros para testes.</a><br>
 <a href="#aula14">Aula 14: .</a><br>
 <a href="#aula15">Aula 15: .</a><br>
 <a href="#aula16">Aula 16: .</a><br>
@@ -382,7 +382,6 @@ Como recuperar os registros inseridos? (DML)
 - basta clicar sobre a tabela!
 
 <br>
-
 ### 2. Linguagem SQL:
 
 ~~~sql
@@ -399,5 +398,49 @@ Atentar-se ao tamanho do BD e quantidade de dados antes de utiliza-lo - verifica
 
 <div id="aula12" align="center">
 <h2>Aula 12: Filtrando registros (WHERE).</h2>
+</div>
+
+Como utilizar filtros para limitar as consultas, atualizações e remoções de registros?
+- filtros permitem especificar o que queremos obter em um BD, especificam quais condições devem ser satisfeitas.
+- também permitem transformar uma relação de registros em informação!
+
+Exemplo:
+
+~~~sql
+SELECT <coluna> FROM <tabela> WHERE <condição>;
+
+/* Caso queira selecionar mais ade uma coluna: */
+SELECT <colunas> FROM <tabela> WHERE <condição> AND <condição>;
+~~~
+
+***Importante:***
+
+a) Operadores de comparação:
+
+<div align="center">
+
+Operador | Função
+---------|---------
+= | Valor da esquerda igual ao da direita
+&lt; | Valor da esquerda menor que o da direita
+&lt;= | Valor da esquerda menor ou igual ao da direita
+&gt; | Valor da esquerda maior que o da direita
+&lt;= | Valor da esquerda maior ou igual ao da direita
+
+</div>
+
+b) Operadores lógicos:
+
+<div align="center">
+
+Operador | Função
+---------|---------
+AND | Todas as operações de comparação devem ser verdadeiras
+OR | Pelo menos 1 das condições de operação deve ser verdadeira.
+
+</div>
+
+<div id="aula13" align="center">
+<h2>Aula 13: Populando o banco de dados com registros para testes.</h2>
 </div>
 
