@@ -26,7 +26,7 @@
 <a href="#aula16">Aula 16: SELECT - Filtros com o operador BETWEEN.</a><br>
 <a href="#aula17">Aula 17: SELECT - Filtros com o operador IN.</a><br>
 <a href="#aula18">Aula 18: SELECT - Filtros com o operador LIKE.</a><br>
-<a href="#aula19">Aula 19: .</a><br>
+<a href="#aula19">Aula 19: SELECT - Ordenando resultado.</a><br>
 <a href="#aula20">Aula 20: .</a><br>
 <a href="#aula21">Aula 21: .</a><br>
 <a href="#aula22">Aula 22: .</a><br>
@@ -579,3 +579,59 @@ WHERE
 <h2>Aula 18: SELECT - Filtros com o operador LIKE.</h2>
 </div>
 
+O operador `LIKE` permite realizar filtros com base em uma pesquisa de um conjunto de caracteres dentro de uma coluna textual.
+
+O operador LIKE travalha com dois caracteres coringas:
+- `%`: indica que pode haver a existência de qualquer conjunto de caracteres no texto.
+- `_`: indica que pode haver um ou mais caracteres em uma posição específica do texto. É mais exato que o %, pois refere-se a uma posição definida!
+
+Podemos combinar os dois coringas também!
+
+Exemplo:
+
+~~~sql
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	nome = 'Evelyn';
+~~~
+
+Aplicando o operador IN:
+
+~~~sql
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	nome LIKE 'Evelyn';
+~~~
+
+Utilizando caracteres coringa:
+
+~~~sql
+SELECT * FROM `tb_alunos`: 
+
+WHERE 
+	nome LIKE '%e';
+/* qualquer conjunto de caracteres que finalize com a letra E */
+
+WHERE
+    nome LIKE '%a%';
+/* pesquisa ocorrência do char "a", começando e terminando com qqr caractere */
+
+WHERE
+    nome LIKE '_riel';
+/* pesquisa palavra com UM caractere desconhecido à esq. */
+
+WHERE
+    nome LIKE 'I__';
+/* pesquisa palavra que inicia com I e tem 2 caracteres indef. à dir. */
+~~~
+
+
+<div id="aula19" align="center">
+<h2>Aula 19: SELECT - Ordenando resultado.</h2>
+</div>
