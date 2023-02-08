@@ -24,7 +24,7 @@
 <a href="#aula14">Aula 14: SELECT - Filtros com Operadores de Comparação.</a><br>
 <a href="#aula15">Aula 15: SELECT - Filtros com Operadores Lógicos.</a><br>
 <a href="#aula16">Aula 16: SELECT - Filtros com o operador BETWEEN.</a><br>
-<a href="#aula17">Aula 17: .</a><br>
+<a href="#aula17">Aula 17: SELECT - Filtros com o operador IN.</a><br>
 <a href="#aula18">Aula 18: .</a><br>
 <a href="#aula19">Aula 19: .</a><br>
 <a href="#aula20">Aula 20: .</a><br>
@@ -35,10 +35,6 @@
 <a href="#aula25">Aula 25: .</a><br>
 <a href="#aula26">Aula 26: .</a><br>
 <a href="#aula27">Aula 27: .</a><br>
-<a href="#aula28">Aula 28: .</a><br>
-<a href="#aula29">Aula 29: .</a><br>
-<a href="#aula30">Aula 30: .</a><br>
-
 
 </div>
 
@@ -461,7 +457,10 @@ E, para inserir diversos dados simultaneamente, exemplo:
 
 ~~~sql
 INSERT INTO `tabela` (`col1`,`col2`,`col3`) VALUES (1,"Jorden",47), (2,"Lacey",59), (3,"Lillith",48);
+/* syntax sugar*/
 ~~~
+
+Obs: "syntax sugar" = sintaxe dentro da linguagem que tem por finalidade tornar suas construções mais fáceis de serem lidas e expressas.
 
 <div id="aula14" align="center">
 <h2>Aula 14: SELECT - Filtros com Operadores de Comparação.</h2>
@@ -526,5 +525,20 @@ WHERE
 
 <div id="aula16" align="center">
 <h2>Aula 16: SELECT - Filtros com o operador BETWEEN.</h2>
+</div>
+
+O operador `BETWEEN` é utilizado quando precisamos filtrar registros cujo valor de determinada coluna encontra-se em um intervalo específico (number ou date).
+
+~~~sql
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	idade BETWEEN  18 AND 21;
+~~~
+
+<div id="aula17" align="center">
+<h2>Aula 17: SELECT - Filtros com o operador IN.</h2>
 </div>
 
