@@ -21,7 +21,7 @@
 <a href="#aula11">Aula 11: SELECT - Consultando dados.</a><br>
 <a href="#aula12">Aula 12: Filtrando registros (WHERE).</a><br>
 <a href="#aula13">Aula 13: Populando o banco de dados com registros para testes.</a><br>
-<a href="#aula14">Aula 14: .</a><br>
+<a href="#aula14">Aula 14: SELECT - Filtros com Operadores de Comparação.</a><br>
 <a href="#aula15">Aula 15: .</a><br>
 <a href="#aula16">Aula 16: .</a><br>
 <a href="#aula17">Aula 17: .</a><br>
@@ -382,6 +382,7 @@ Como recuperar os registros inseridos? (DML)
 - basta clicar sobre a tabela!
 
 <br>
+
 ### 2. Linguagem SQL:
 
 ~~~sql
@@ -442,5 +443,17 @@ OR | Pelo menos 1 das condições de operação deve ser verdadeira.
 
 <div id="aula13" align="center">
 <h2>Aula 13: Populando o banco de dados com registros para testes.</h2>
+</div>
+
+Para preencher o BD demonstrado em aula, o prof. gerou dados aleatórios através do site [Generate Data](https://generatedata.com/).
+
+E, para inserir diversos dados simultaneamente, exemplo:
+
+~~~sql
+INSERT INTO `tabela` (`col1`,`col2`,`col3`) VALUES (1,"Jorden",47), (2,"Lacey",59), (3,"Lillith",48);
+~~~
+
+<div id="aula14" align="center">
+<h2>Aula 14: SELECT - Filtros com Operadores de Comparação.</h2>
 </div>
 
