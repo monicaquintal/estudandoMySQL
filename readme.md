@@ -25,7 +25,7 @@
 <a href="#aula15">Aula 15: SELECT - Filtros com Operadores Lógicos.</a><br>
 <a href="#aula16">Aula 16: SELECT - Filtros com o operador BETWEEN.</a><br>
 <a href="#aula17">Aula 17: SELECT - Filtros com o operador IN.</a><br>
-<a href="#aula18">Aula 18: .</a><br>
+<a href="#aula18">Aula 18: SELECT - Filtros com o operador LIKE.</a><br>
 <a href="#aula19">Aula 19: .</a><br>
 <a href="#aula20">Aula 20: .</a><br>
 <a href="#aula21">Aula 21: .</a><br>
@@ -540,5 +540,42 @@ WHERE
 
 <div id="aula17" align="center">
 <h2>Aula 17: SELECT - Filtros com o operador IN.</h2>
+</div>
+
+O operador `IN` é utilizado para filtrar registros com base na especificação de uma lista de possibilidades.
+
+Exemplo:
+
+~~~sql
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	interesse = 'Jogos' OR interesse = 'Música' OR interesse = 'Esportes';
+
+/* utilizando o operador IN: */
+
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	interesse IN ('Jogos', 'Música', 'Esportes');
+~~~
+
+Há também a possibilidade de utilizar `NOT IN`:
+
+~~~sql
+SELECT
+	* 
+FROM 
+	`tb_alunos` 
+WHERE 
+	interesse NOT IN ('Jogos', 'Música', 'Esportes');
+~~~
+
+<div id="aula18" align="center">
+<h2>Aula 18: SELECT - Filtros com o operador LIKE.</h2>
 </div>
 
