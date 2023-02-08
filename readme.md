@@ -23,7 +23,7 @@
 <a href="#aula13">Aula 13: Populando o banco de dados com registros para testes.</a><br>
 <a href="#aula14">Aula 14: SELECT - Filtros com Operadores de Comparação.</a><br>
 <a href="#aula15">Aula 15: SELECT - Filtros com Operadores Lógicos.</a><br>
-<a href="#aula16">Aula 16: .</a><br>
+<a href="#aula16">Aula 16: SELECT - Filtros com o operador BETWEEN.</a><br>
 <a href="#aula17">Aula 17: .</a><br>
 <a href="#aula18">Aula 18: .</a><br>
 <a href="#aula19">Aula 19: .</a><br>
@@ -500,6 +500,8 @@ Operadores | Função
 <h2>Aula 15: SELECT - Filtros com Operadores Lógicos.</h2>
 </div>
 
+Operadores lógicos combinam resultados de operadores de comparação.
+
 ### Operadores Lógicos
 
 <div align="center">
@@ -514,11 +516,15 @@ OR | Pelo menos uma das operações de comparação deve ser verdadeira
 ### Exemplo:
 
 ~~~sql
-SELECT 
-  id_curso, nome_curso 
+SELECT
+	* 
 FROM 
-  tb_cursos 
+	`tb_alunos` 
 WHERE 
-  investimento < 500.00 AND carga_horria < 30;
+	interesse = 'Jogos' AND idade >= 30;
 ~~~
+
+<div id="aula16" align="center">
+<h2>Aula 16: SELECT - Filtros com o operador BETWEEN.</h2>
+</div>
 
