@@ -22,12 +22,22 @@
 <a href="#aula12">Aula 12: Filtrando registros (WHERE).</a><br>
 <a href="#aula13">Aula 13: Populando o banco de dados com registros para testes.</a><br>
 <a href="#aula14">Aula 14: SELECT - Filtros com Operadores de Comparação.</a><br>
-<a href="#aula15">Aula 15: .</a><br>
+<a href="#aula15">Aula 15: SELECT - Filtros com Operadores Lógicos.</a><br>
 <a href="#aula16">Aula 16: .</a><br>
 <a href="#aula17">Aula 17: .</a><br>
 <a href="#aula18">Aula 18: .</a><br>
 <a href="#aula19">Aula 19: .</a><br>
 <a href="#aula20">Aula 20: .</a><br>
+<a href="#aula21">Aula 21: .</a><br>
+<a href="#aula22">Aula 22: .</a><br>
+<a href="#aula23">Aula 23: .</a><br>
+<a href="#aula24">Aula 24: .</a><br>
+<a href="#aula25">Aula 25: .</a><br>
+<a href="#aula26">Aula 26: .</a><br>
+<a href="#aula27">Aula 27: .</a><br>
+<a href="#aula28">Aula 28: .</a><br>
+<a href="#aula29">Aula 29: .</a><br>
+<a href="#aula30">Aula 30: .</a><br>
 
 
 </div>
@@ -456,4 +466,59 @@ INSERT INTO `tabela` (`col1`,`col2`,`col3`) VALUES (1,"Jorden",47), (2,"Lacey",5
 <div id="aula14" align="center">
 <h2>Aula 14: SELECT - Filtros com Operadores de Comparação.</h2>
 </div>
+
+Como consultar os registros dentro das tabelas de forma mais avançada? Utilizar operadores de comparação para filtrar registros!
+
+***Operar apenas com linguagem SQL*** (geralmente não há recursos de seleção avançada através da interface visual)!
+
+### Exemplo:
+
+~~~sql
+SELECT
+  id_curso, nome_curso 
+FROM 
+  `tb_cursos` 
+WHERE 
+  investimento < 500.00;
+~~~
+
+### Operadores de Comparação
+
+<div align="center">
+
+Operadores | Função
+:---------:|---------
+= | Valor da esquerda igual ao valor da direita
+&lt; | Valor da esquerda menor que o valor da direita
+&lt;= | Valor da esquerda menor ou igual ao valor da direita
+&gt; | Valor da esquerda maior que o valor da direita
+&gt;= | Valor da esquerda maior ou igual ao valor da direita
+
+</div>
+
+<div id="aula15" align="center">
+<h2>Aula 15: SELECT - Filtros com Operadores Lógicos.</h2>
+</div>
+
+### Operadores Lógicos
+
+<div align="center">
+
+Operadores | Função
+:---------:|---------
+AND | Todas as operações de comparação devem ser verdadeiras
+OR | Pelo menos uma das operações de comparação deve ser verdadeira
+
+</div>
+
+### Exemplo:
+
+~~~sql
+SELECT 
+  id_curso, nome_curso 
+FROM 
+  tb_cursos 
+WHERE 
+  investimento < 500.00 AND carga_horria < 30;
+~~~
 
