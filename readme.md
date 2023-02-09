@@ -2,12 +2,14 @@
 <h2>Estudando MySQL 🐬</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
+
 </div>
 
 <div align="justify">
 
 ## Conteúdo
 
+<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />        
 <a href="#aula01">Aula 01: O que é MySQL?</a><br>
 <a href="#aula02">Aula 02: Um pouco mais sobre SQL.</a><br>
 <a href="#aula03">Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</a><br>
@@ -29,7 +31,7 @@
 <a href="#aula19">Aula 19: SELECT - Ordenando resultado.</a><br>
 <a href="#aula20">Aula 20: SELECT - Limitando retorno.</a><br>
 <a href="#aula21">Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</a><br>
-<a href="#aula22">Aula 22: .</a><br>
+<a href="#aula22">Aula 22: SELECT - Funções de agregação parte 2: SUM e COUNT.</a><br>
 <a href="#aula23">Aula 23: .</a><br>
 <a href="#aula24">Aula 24: .</a><br>
 <a href="#aula25">Aula 25: .</a><br>
@@ -710,4 +712,30 @@ Quando definimos o ***OFFSET***, serão retornados os registros a partir de seu 
 <h2>Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</h2>
 </div>
 
-Aula 20: SELECT - Limitando retorno.
+Resolvem problemas que são corriqueiros no dia-a-dia.
+
+Sintaxe:
+
+~~~sql
+SELECT
+  <funções_de_agregação>
+FROM
+  <tabela(s)>
+WHERE
+  <filtro(s)>
+~~~ 
+
+Sendo:
+
+1. `MIN(<coluna>)`: retorna o **menor** valor de todos os registros com base em uma coluna.
+
+2. `MAX(<coluna>)`: retorna o **maior** valor de todos os registros com base em uma coluna.
+
+3. `AVG(<coluna>)`: retorna a **média** de todos os registros com base em uma coluna.
+
+> A operação `TRUNCATE <tabela>` limpa todos os registros existentes dentro da tabela!!!
+
+<div id="aula22" align="center">
+<h2>Aula 22: SELECT - Funções de agregação parte 2: SUM e COUNT.</h2>
+</div>
+
