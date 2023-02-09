@@ -1,15 +1,14 @@
 <div align="center">
-<h2>Estudando MySQL 🐬</h2>
+<h2>Estudando MySQL</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
-
+<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
 </div>
 
 <div align="justify">
 
 ## Conteúdo
-
-<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />        
+     
 <a href="#aula01">Aula 01: O que é MySQL?</a><br>
 <a href="#aula02">Aula 02: Um pouco mais sobre SQL.</a><br>
 <a href="#aula03">Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</a><br>
@@ -737,5 +736,26 @@ Sendo:
 
 <div id="aula22" align="center">
 <h2>Aula 22: SELECT - Funções de agregação parte 2: SUM e COUNT.</h2>
+</div>
+
+Sintaxe:
+
+~~~sql
+SELECT
+  <funções_de_agregação>
+FROM
+  <tabela(s)>
+WHERE
+  <filtro(s)>
+~~~ 
+
+Sendo:
+
+1. `SUM(<coluna>)`: retorna a **soma** dos valores de todos os registros com base em uma coluna.
+
+2. `COUNT(*)`: retorna a **quantidade** de todos os registros de uma tabela.
+
+<div id="aula23" align="center">
+<h2>Aula 23: SELECT - Agrupando seleção de registros (GROUP BY).</h2>
 </div>
 
