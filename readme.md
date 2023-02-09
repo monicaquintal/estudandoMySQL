@@ -28,7 +28,7 @@
 <a href="#aula18">Aula 18: SELECT - Filtros com o operador LIKE.</a><br>
 <a href="#aula19">Aula 19: SELECT - Ordenando resultado.</a><br>
 <a href="#aula20">Aula 20: SELECT - Limitando retorno.</a><br>
-<a href="#aula21">Aula 21: .</a><br>
+<a href="#aula21">Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</a><br>
 <a href="#aula22">Aula 22: .</a><br>
 <a href="#aula23">Aula 23: .</a><br>
 <a href="#aula24">Aula 24: .</a><br>
@@ -660,3 +660,54 @@ Sendo os pivôs de ordenação de resultados:
 <h2>Aula 20: SELECT - Limitando retorno.</h2>
 </div>
 
+ O `LIMIT` é um recurso que limita a quantidade de registros informados, no momento de retorno da consulta; é geralmente usado quando há muitos registros e queremos limitar a quantidade de registros que serão exibidos ao usuário final, como em paginações.
+
+Exemplo da aplicação:
+
+~~~sql
+SELECT
+  <coluna(s)>
+FROM
+  <tabela(s)>
+WHERE
+  <filtro(s)>
+ORDER BY 
+  <ordenação>
+LIMIT 
+  5
+OFFSET
+  2 
+~~~
+
+Importante:
+
+- o `LIMIT` é opcional; coloca-lo sempre ao final da query!
+- o `OFFSET` pode ser usado apenas quando o LIMIT é declarado (depende dele, embora também seja opcional)! Ele funciona como um deslocamento, podendo ser definido de 2 formas:
+
+~~~sql
+<...>
+LIMIT 
+  5
+OFFSET
+  2 
+~~~
+
+ou: 
+
+~~~sql
+<...>
+LIMIT
+    2, 5
+/* 2 = OFFSET e 5 = LIMIT */
+/* SINTAXE: VALOR_OFFSET, VALOR_LIMIT*/
+~~~
+
+Quando definimos o ***OFFSET***, serão retornados os registros a partir de seu valor:
+- Exemplo: em OFFSET = 4, retornará os dados a partir do 4° registro - incluindo o valor do 4° registro)!
+- É MUITO IMPORTANTE lembrar que, no BD, o primeiro registro ocupará a posição 0 (zero)!
+
+<div id="aula21" align="center">
+<h2>Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</h2>
+</div>
+
+Aula 20: SELECT - Limitando retorno.
