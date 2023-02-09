@@ -1,5 +1,5 @@
 <div align="center">
-<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
+<img align="right" height="130" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
 <h2>Estudando MySQL</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
@@ -785,3 +785,29 @@ LIMIT
 <div id="aula24" align="center">
 <h2>Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</h2>
 </div>
+
+A instrução `HAVING` serve para aplicar filtros aos resultados de colunas agrupadas (HAVING não vive sem  GROUP BY, mas o contrário não é obrigatório!)!
+
+Sintaxe:
+
+~~~sql
+SELECT
+  <coluna(s)>
+FROM
+  <tabela(s)>
+WHERE
+  <filtro(s)>
+GROUP BY
+ <agrupamento>
+HAVING
+  <filtros_sobre_agrupamento>
+ORDER BY 
+  <ordenação>
+LIMIT
+  <offset>, <limit>
+~~~ 
+
+<div id="aula25" align="center">
+<h2>Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</h2>
+</div>
+
