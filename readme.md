@@ -1,8 +1,8 @@
 <div align="center">
+<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
 <h2>Estudando MySQL</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
-<img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
 </div>
 
 <div align="justify">
@@ -31,11 +31,11 @@
 <a href="#aula20">Aula 20: SELECT - Limitando retorno.</a><br>
 <a href="#aula21">Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</a><br>
 <a href="#aula22">Aula 22: SELECT - Funções de agregação parte 2: SUM e COUNT.</a><br>
-<a href="#aula23">Aula 23: .</a><br>
-<a href="#aula24">Aula 24: .</a><br>
-<a href="#aula25">Aula 25: .</a><br>
-<a href="#aula26">Aula 26: .</a><br>
-<a href="#aula27">Aula 27: .</a><br>
+<a href="#aula23">Aula 23: SELECT - Agrupando seleção de registros (GROUP BY).</a><br>
+<a href="#aula24">Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</a><br>
+<a href="#aula25">Aula 25: UPDATE - Atualizando registros.</a><br>
+<a href="#aula26">Aula 26: DELETE - Excluindo registros.</a><br>
+<a href="#aula27">Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</a><br>
 
 </div>
 
@@ -759,3 +759,29 @@ Sendo:
 <h2>Aula 23: SELECT - Agrupando seleção de registros (GROUP BY).</h2>
 </div>
 
+A instrução `GROUP BY` agrupa os registros com base em uma ou mais colunas cujos valores sejam iguais. Permite realizar funções de agregação em cada subconjunto agrupado de registros. 
+
+É muito utilizado em conjunto com funções de agregação!
+
+Está posicionado em um local espefífico da construção da query (após FROM ou WHERE, e sempre antes de ORDER BY E LIMIT, quando utilizados).
+
+Sintaxe:
+
+~~~sql
+SELECT
+  <coluna(s)>
+FROM
+  <tabela(s)>
+WHERE
+  <filtro(s)>
+GROUP BY
+ <agrupamento>
+ORDER BY 
+  <ordenação>
+LIMIT
+  <offset>, <limit>
+~~~ 
+
+<div id="aula24" align="center">
+<h2>Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</h2>
+</div>
