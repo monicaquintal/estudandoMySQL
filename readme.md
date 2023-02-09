@@ -27,7 +27,7 @@
 <a href="#aula17">Aula 17: SELECT - Filtros com o operador IN.</a><br>
 <a href="#aula18">Aula 18: SELECT - Filtros com o operador LIKE.</a><br>
 <a href="#aula19">Aula 19: SELECT - Ordenando resultado.</a><br>
-<a href="#aula20">Aula 20: .</a><br>
+<a href="#aula20">Aula 20: SELECT - Limitando retorno.</a><br>
 <a href="#aula21">Aula 21: .</a><br>
 <a href="#aula22">Aula 22: .</a><br>
 <a href="#aula23">Aula 23: .</a><br>
@@ -615,19 +615,19 @@ Utilizando caracteres coringa:
 SELECT * FROM `tb_alunos`: 
 
 WHERE 
-	nome LIKE '%e';
+  nome LIKE '%e';
 /* qualquer conjunto de caracteres que finalize com a letra E */
 
 WHERE
-    nome LIKE '%a%';
+  nome LIKE '%a%';
 /* pesquisa ocorrência do char "a", começando e terminando com qqr caractere */
 
 WHERE
-    nome LIKE '_riel';
+  nome LIKE '_riel';
 /* pesquisa palavra com UM caractere desconhecido à esq. */
 
 WHERE
-    nome LIKE 'I__';
+  nome LIKE 'I__';
 /* pesquisa palavra que inicia com I e tem 2 caracteres indef. à dir. */
 ~~~
 
@@ -635,3 +635,28 @@ WHERE
 <div id="aula19" align="center">
 <h2>Aula 19: SELECT - Ordenando resultado.</h2>
 </div>
+
+Como podemos ordenar os resultados das consultas? Utilizaremos a instrução/palavra reservada `ORDER BY`.
+
+A construção de uma query (consulta) possui uma estrutura, como representado a seguir:
+
+~~~sql
+SELECT
+  <coluna(s)>
+FROM
+  <tabela(s)>
+WHERE /* opcional */
+  <filtro(s)>
+ORDER BY /* opcional */
+  <categoria1> ASC, <categoria2> DESC;
+~~~
+
+Sendo os pivôs de ordenação de resultados:
+
+- `ASC`: Ascending (ascendente). É o default, caso não coloquemos a informação de ASC ou DESC!
+- `DESC`: Descending (descendente).
+
+<div id="aula20" align="center">
+<h2>Aula 20: SELECT - Limitando retorno.</h2>
+</div>
+
