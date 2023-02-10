@@ -847,9 +847,22 @@ WHERE
 
 Caso tenha dúvidas sobre quais registros serão afetados pelo DELETE, podemos ***simular a pesquisa*** clicando no botão na parte inferior da tela!!!
 
-Um detalhe interessante é que geralmente os registros não são removidos. Normalmente, opta-se por fazer a atualização no registro, modificando alguma coluna que indique seu estado (ativo/inativo).
+Um detalhe interessante é que geralmente os registros não são removidos. Normalmente, opta-se por fazer a atualização no registro, modificando alguma coluna que indique seu estado (ativo/inativo). Geralmente são mantidos para fins de log/histórico.
 
 <div id="aula27" align="center">
 <h2>Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</h2>
 </div>
 
+O `relacionamento entre tabelas` consiste em tentar imitar a relação entre as coisas que existem no mundo real.
+
+Há ***três tipos*** de relacionamentos possíveis entre tabelas:
+
+- um para um:
+- um para muitos:
+- muitos para muitos: 
+
+A `chave primária` serve como identificador único para cada registro de uma tabela, de modo que esse identificador não se repita em momento algum para nenhum outro registro. 
+- É muito utilizada para seleção, atualização, remoção de registros e criação de relacionamentos consistentes entre tabelas. 
+- Pode ser uma chave composta, quando é composta por 2 ou mais campos.
+
+Já a `chave estrangeira`, é uma referência à chave primária de outra tabela! 
