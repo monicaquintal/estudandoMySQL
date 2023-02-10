@@ -1,5 +1,5 @@
 <div align="center">
-<img align="right" height="130" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />  
+<a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="130" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /></a>
 <h2>Estudando MySQL</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
@@ -800,14 +800,34 @@ WHERE
 GROUP BY
  <agrupamento>
 HAVING
-  <filtros_sobre_agrupamento>
+  <filtros_sobre_resultado_do_agrupamento>
 ORDER BY 
   <ordenação>
 LIMIT
   <offset>, <limit>
 ~~~ 
 
+Observação: no MySQL podemos utilizar `!=` ou `<>` para indicar "diferente".
+
 <div id="aula25" align="center">
-<h2>Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</h2>
+<h2>Aula 25: UPDATE - Atualizando registros.</h2>
 </div>
 
+Como atualizar registros contidos dentro de tabelas em nossos BDs?
+
+A instrução `UPDATE` faz parte do DML, ou seja, instrução de manipulação de dados.
+
+~~~sql
+UPDATE
+  <tabela>
+SET
+  <coluna> = <valor> , <coluna> = <valor>
+WHERE
+  <filtro(s)>
+~~~
+
+O **WHERE** especifica qual o registro ou conjunto de registros que serão afetados pela instrução de atualização!
+
+<div id="aula26" align="center">
+<h2>Aula 26: DELETE - Excluindo registros.</h2>
+</div>
