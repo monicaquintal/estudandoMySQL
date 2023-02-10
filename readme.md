@@ -831,3 +831,25 @@ O **WHERE** especifica qual o registro ou conjunto de registros que serão afeta
 <div id="aula26" align="center">
 <h2>Aula 26: DELETE - Excluindo registros.</h2>
 </div>
+
+A instrução `DELETE` faz parte do subconjunto de instruções DML, ou seja, mais um comando para manipulação de dados.
+
+Sintaxe:
+
+~~~sql
+DELETE FROM
+  <tabela>
+WHERE
+  <filtro(s)>
+~~~
+
+> ***IMPORTANTE:*** caso o WHERE seja omitido (não esteja presente no comando DELETE), ***TODOS*** os registros da tabela serão removidos!!!
+
+Caso tenha dúvidas sobre quais registros serão afetados pelo DELETE, podemos ***simular a pesquisa*** clicando no botão na parte inferior da tela!!!
+
+Um detalhe interessante é que geralmente os registros não são removidos. Normalmente, opta-se por fazer a atualização no registro, modificando alguma coluna que indique seu estado (ativo/inativo).
+
+<div id="aula27" align="center">
+<h2>Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</h2>
+</div>
+
