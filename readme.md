@@ -38,7 +38,6 @@
 <a href="#aula27">Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</a><br>
 <br>
 <hr>
-<br>
 
 ## Projeto Loja Virtual
 
@@ -888,7 +887,7 @@ Já a `chave estrangeira`, é uma referência à chave primária de outra tabela
 <hr>
 
 <div align="center" id="projeto">
-<a href="https://github.com/monicaquintal" target="_blank"><img align="left" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /></a>
+<a href="https://github.com/monicaquintal" target="_blank"><img align="left" height="130" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /></a>
 <h2>Projeto Loja Virtual</h2>
 <h3>Seção 13: Banco de Dados MySQL</h3>
 <p>Curso Desenvolvimento Web Completo 2022</p>
@@ -898,9 +897,9 @@ Já a `chave estrangeira`, é uma referência à chave primária de outra tabela
 
 ## O Projeto
 
-COntinuidade do estudo de relacionamento entre tabelas e, em paralelo, desenvolvimento do Projeto Loja Virtual.
+Continuidade do estudo de relacionamento entre tabelas e, em paralelo, desenvolvimento do Projeto Loja Virtual.
 
-Criação de uma estrutura de dados que suporte uma aplicação com proposta de venda de produtos pela internet.
+O projeto consiste na criação de uma estrutura de dados que suporte uma aplicação com proposta de venda de produtos pela internet.
 
 ## Conteúdo
      
@@ -977,4 +976,34 @@ CREATE TABLE td_descricoes_tecnicas (
 
 <div id="aula002" align="center">
 <h2>Aula 02: Relacionamento Um para Um (populando tabelas).</h2>
+</div>
+
+Nesta aula, serão inseridos registros nas tabelas (populando-as).
+
+Começar os INSERTs pela tabela tb_produtos, pois tb_descricoes_tecnicas depende da existência da chave estrangeira!
+
+~~~sql
+// em tb_produtos
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Notebook Dell Inspiron Ultrafino Intel Core i7, 16GB RAM e 240GB SSD', 3500.00);
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Smart TV LED 40" Samsung Full HD 2 HDMI 1 USB Wi-Fi Integrado', 1475.54);
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Smartphone LG K10 Dual Chip Android 7.0 4G Wi-Fi Câmera de 13MP', 629.99);
+~~~
+
+~~~sql
+// em tb_descricoes_tecnicas
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O novo Inspiron Dell oferece um design elegante e tela infinita que amplia seus sentidos, mantendo a sofisticação e medidas compactas...');
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, 'A smart TV da Samsung possui tela de 40" e oferece resolução Full HD, imagens duas vezes melhores que TVs HDs padrão...');
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'Saia da mesmice. O smartphone LG está mais divertido, rápido, fácil, cheio de selfies e com tela HD de incríveis 5,3"...');
+~~~
+
+<hr>
+
+<div id="aula003" align="center">
+<h2>Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</h2>
 </div>
