@@ -36,6 +36,24 @@
 <a href="#aula25">Aula 25: UPDATE - Atualizando registros.</a><br>
 <a href="#aula26">Aula 26: DELETE - Excluindo registros.</a><br>
 <a href="#aula27">Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</a><br>
+<br>
+<hr>
+<br>
+
+## Projeto Loja Virtual
+
+<a href="#projeto">Sobre o Projeto.</a><br>
+<a href="#aula001">Aula 01: Relacionamento Um para Um.</a><br>
+<a href="#aula002">Aula 02: Relacionamento Um para Um (populando tabelas).</a><br>
+<a href="#aula003">Aula 03: Relacionamento Um para Muitos.</a><br>
+<a href="#aula004">Aula 04: Relacionamento Muitos para Muitos.</a><br>
+<a href="#aula005">Aula 05: Relacionamento Muitos para Muitos (populando tabelas).</a><br>
+<a href="#aula006">Aula 06: Introdução às Junções (JOINS) entre tabelas.</a><br>
+<a href="#aula007">Aula 07: JOIN - Junção à esquerda (LEFT JOIN).</a><br>
+<a href="#aula008">Aula 08: JOIN - Junção à direita (RIGHT JOIN).</a><br>
+<a href="#aula009">Aula 09: JOIN - Junção interna (INNER JOIN).</a><br>
+<a href="#aula010">Aula 10: Alias - Apelidando tabelas.</a><br>
+<a href="#aula011">Aula 11: Considerações finais e Atividades extra.</a><br>
 
 </div>
 
@@ -866,3 +884,97 @@ A `chave primária` serve como identificador único para cada registro de uma ta
 - Pode ser uma chave composta, quando é composta por 2 ou mais campos.
 
 Já a `chave estrangeira`, é uma referência à chave primária de outra tabela! 
+
+<hr>
+
+<div align="center" id="projeto">
+<a href="https://github.com/monicaquintal" target="_blank"><img align="left" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /></a>
+<h2>Projeto Loja Virtual</h2>
+<h3>Seção 13: Banco de Dados MySQL</h3>
+<p>Curso Desenvolvimento Web Completo 2022</p>
+</div>
+
+<div align="justify">
+
+## O Projeto
+
+COntinuidade do estudo de relacionamento entre tabelas e, em paralelo, desenvolvimento do Projeto Loja Virtual.
+
+Criação de uma estrutura de dados que suporte uma aplicação com proposta de venda de produtos pela internet.
+
+## Conteúdo
+     
+<a href="#aula001">Aula 01: Relacionamento Um para Um.</a><br>
+<a href="#aula002">Aula 02: Relacionamento Um para Um (populando tabelas).</a><br>
+<a href="#aula003">Aula 03: Relacionamento Um para Muitos.</a><br>
+<a href="#aula004">Aula 04: Relacionamento Muitos para Muitos.</a><br>
+<a href="#aula005">Aula 05: Relacionamento Muitos para Muitos (populando tabelas).</a><br>
+<a href="#aula006">Aula 06: Introdução às Junções (JOINS) entre tabelas.</a><br>
+<a href="#aula007">Aula 07: JOIN - Junção à esquerda (LEFT JOIN).</a><br>
+<a href="#aula008">Aula 08: JOIN - Junção à direita (RIGHT JOIN).</a><br>
+<a href="#aula009">Aula 09: JOIN - Junção interna (INNER JOIN).</a><br>
+<a href="#aula010">Aula 10: Alias - Apelidando tabelas.</a><br>
+<a href="#aula011">Aula 11: Considerações finais e Atividades extra.</a><br>
+
+</div>
+
+<hr>
+
+<div id="aula001" align="center">
+<h2>Aula 01: Relacionamento Um para Um.</h2>
+</div>
+
+Inicialmente, serão criadas duas tabelas:
+- `tb_produtos`: armazena a descrição do produto e seu valor.
+- `tb_descricoes_tecnicas`: armazena a descrição técnica de cada produto.
+
+No Diagrama de Entidade Relacionamento, temos:
+
+<br>
+<div align="center">
+<img src="./assets/diagrama-entidade-relacionamento-1p1.png" width="80%"/>
+<br>
+<em>Elaborado com <a href="http://fabforce.eu/dbdesigner4/downloads.php">DB Designer 4</a></em>
+</div>
+<br>
+
+Neste caso, observamos que UM produto terá como correspondente UMA especificação técnica (Relacionamento Um para Um). Além disso, temos a chave primária id_produto (de tb_produtos) sendo importada para (tb_descricoes_tecnicas), ou seja, chave estrangeira.
+
+### No MySQL:
+
+1. Criação do novo Banco de Dados:
+
+~~~sql
+CREATE DATABASE db_loja_virtual;
+~~~
+
+2. Criando a tabela de produtos:
+
+~~~sql
+CREATE TABLE tb_produtos (
+  id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  produto VARCHAR(200) NOT NULL,
+  valor FLOAT(8,2) NOT NULL
+);
+~~~
+
+> ***Importante:*** inserindo `PRIMARY KEY`, fará com que o SGBD impeça a inserção de valores duplicados na chave primária id_produto! Além disso, `AUTO_INCREMENT` faz com que o próprio SGBD crie campos gerenciados por ele, de modo que, ao inserir novo registro, a informação atribuída pelo BD será o valor anteriormente inserido + 1 (vai incrementando)!
+
+3. Criando a tabela de descrições técnicas:
+
+~~~sql
+CREATE TABLE td_descricoes_tecnicas (
+  id_descricao_tecnica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_produto INT NOT NULL,
+  descricao_tecnica TEXT NOT NULL ,
+  FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+)
+~~~
+
+> ***Importante:*** a instrução `FOREIGN KEY()` recebe como parâmetro o nome da coluna que será usada nesta tabela como chave estrangeira, e na sequência, sua referência (de onde vem e para onde vai), através da palavra reservada REFERENCES.
+
+<hr>
+
+<div id="aula002" align="center">
+<h2>Aula 02: Relacionamento Um para Um (populando tabelas).</h2>
+</div>
