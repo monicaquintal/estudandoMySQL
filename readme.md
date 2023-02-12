@@ -1256,11 +1256,11 @@ Há diversos tipos de Junções:
 
 No `db_loja_virtual`, há 6 tabelas. Utilizando consultas simples com apenas a instrução `SELECT`, podemos acessar algumas informações. Entretanto, quando a consulta envolve mais do que apenas uma tabela, as junções de tabelas (`JOIN`) se tornam necessárias!
 
-### Exemplo 1 - associando `tb_clientes` e `tb_pedidos`:
+### Exemplo 1 - associando &lt;tb_clientes&gt; e &lt;tb_pedidos&gt;:
 
 > A `LEFT JOIN` relaciona todos os registros da tabela à esquerda + ***CASO EXISTA***, todos os registros da tabela à direita.
 
-Para que haja uma junção entre tabelas, é preciso estabelecer um ***pivô*** de relacionamento entre os registros dessas tabelas (ATRAVÉS DE `CHAVES PRIMÁRIAS/ESTRANGEIRAS`)!
+Para que haja uma junção entre tabelas, é preciso estabelecer um ***pivô*** de relacionamento entre os registros dessas tabelas (como `CHAVES PRIMÁRIAS/ESTRANGEIRAS`)!
 
 ~~~sql
 SELECT 
@@ -1269,7 +1269,7 @@ FROM
   tb_clientes LEFT JOIN tb_pedidos ON (tb_clientes.id_cliente=tb_pedidos.id_cliente);
 ~~~
 
-### Exemplo 2 - associando `tb_produtos` e `tb_imagens`:
+### Exemplo 2 - associando &lt;tb_produtos&gt; e &lt;tb_imagens&gt;:
 
 ~~~sql
 SELECT 
@@ -1283,4 +1283,35 @@ FROM
 
 <div id="aula008" align="center">
 <h2>Aula 08: JOIN - Junção à direita (RIGHT JOIN).</h2>
+</div>
+
+### Exemplo 1 - Utilizando LEFT JOIN para exibir tb_clientes e tb_pedidos:
+
+~~~sql
+SELECT
+  *
+FROM
+  tb_clientes LEFT JOIN tb_pedidos ON (tb_clientes.id_cliente = tb_pedidos.id_cliente);
+~~~
+
+Neste caso, temos prioritariamente os registros de tb_clientes (à esquerda) sendo apresentados, e exibe os de tb_pedidos, caso existam.  
+
+### Exemplo 2 - Utilizando RIGHT JOIN para exibir tb_clientes e tb_pedidos:
+
+~~~sql
+SELECT
+  *
+FROM
+  tb_clientes RIGHT JOIN tb_pedidos ON (tb_clientes.id_cliente = tb_pedidos.id_cliente);
+~~~
+
+Neste caso, como a prioridade será a tabela tb_pedidos, não ocorrerá o retorno de pedidos vazios, por exemplo!
+
+> A `RIGHT JOIN` relaciona todos os registros da tabela à direita + ***CASO EXISTA***, todos os registros da tabela à esquerda.
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula009" align="center">
+<h2>Aula 09: JOIN - Junção interna (INNER JOIN).</h2>
 </div>
