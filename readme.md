@@ -1090,16 +1090,17 @@ Nesta aula, criaremos a tabela tb_imagens, que armazenará 1 a n imagens de cada
 <br>
 <div align="center">
 <img src="./assets/diagrama-entidade-relacionamento-1pn.png" width="80%"/>
+</div>
 <br>
 
 1. Criando a tabela `tb_imagens`:
 
 ~~~sql
 CREATE TABLE tb_imagens (
-    id_imagem INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_produto INT NOT NULL,
-    FOREIGN KEY (id_produto) REFERENCES tb_produtos(id_produto),
-    url_imagem VARCHAR(200) NOT NULL
+  id_imagem INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_produto INT NOT NULL,
+  FOREIGN KEY (id_produto) REFERENCES tb_produtos(id_produto),
+  url_imagem VARCHAR(200) NOT NULL
 );
 ~~~
 
@@ -1119,4 +1120,53 @@ INSERT INTO tb_imagens(id_produto, url_imagem) VALUES (3, 'smartphone_1.jpg');
 
 <div id="aula004" align="center">
 <h2>Aula 04: Relacionamento Muitos para Muitos.</h2>
+</div>
+
+Neste caso, teremos também cadastros de clientes e produtos disponíveis para compra. Ou seja, o cliente pode fazer N pedidos, os quais poderão conter N produtos (podendo o mesmo produto estar presente em vários pedidos diferentes).
+
+No DER:
+
+<br>
+<div align="center">
+<img src="./assets/diagrama-entidade-relacionamento-npn.png" width="80%"/>
+</div>
+<br>
+
+1. Criando a tabela `tb_clientes`:
+
+~~~sql
+CREATE TABLE tb_clientes(
+	id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  idade INT (3) NOT NULL
+);
+~~~
+
+2. Criando a tabela `tb_pedidos`:
+
+~~~sql
+CREATE TABLE tb_pedidos(
+	id_pedido INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_cliente INT NOT NULL,
+  FOREIGN KEY (id_cliente) REFERENCES tb_clientes(id_cliente),
+  data_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+~~~
+
+3. Criando tabea `tb_pedidos_produtos` (auxiliar no relacionamento de muitos para muitos entre as tabelas tb_pedidos e tb_produtos):
+
+~~~sql
+CREATE TABLE tb_pedidos_produtos(
+	id_pedido INT NOT NULL,
+  id_produto INT NOT NULL,
+  FOREIGN KEY(id_pedido) REFERENCES tb_pedidos(id_pedido),
+  FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+);
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula005" align="center">
+<h2>Aula 05: Relacionamento Muitos para Muitos (populando tabelas).</h2>
 </div>
