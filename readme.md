@@ -1236,3 +1236,20 @@ INSERT INTO tb_pedidos_produtos(id_pedido, id_produto) VALUES(3,1);
 <div id="aula006" align="center">
 <h2>Aula 06: Introdução às Junções (JOINS) entre tabelas.</h2>
 </div>
+
+As Junções (ou `JOINS`) entre tabelas permitem criar consultas mais avançadas: permitem conectar registros de tabelas diferentes, formando um resultado de pesquisa composto (uma consulta retornará registros compostos por diversas colunas, de tabelas diferentes, desde que os registros entre elas se relacionem).
+
+Há diversos tipos de Junções:
+
+<br>
+<div align="center">
+<img src="./assets/joins-intro.png" width="80%"/>
+</div>
+<br>
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula007" align="center">
+<h2>Aula 07: JOIN - Junção à esquerda (LEFT JOIN).</h2>
+</div>
