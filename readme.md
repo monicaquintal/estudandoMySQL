@@ -1253,3 +1253,34 @@ Há diversos tipos de Junções:
 <div id="aula007" align="center">
 <h2>Aula 07: JOIN - Junção à esquerda (LEFT JOIN).</h2>
 </div>
+
+No `db_loja_virtual`, há 6 tabelas. Utilizando consultas simples com apenas a instrução `SELECT`, podemos acessar algumas informações. Entretanto, quando a consulta envolve mais do que apenas uma tabela, as junções de tabelas (`JOIN`) se tornam necessárias!
+
+### Exemplo 1 - associando `tb_clientes` e `tb_pedidos`:
+
+> A `LEFT JOIN` relaciona todos os registros da tabela à esquerda + ***CASO EXISTA***, todos os registros da tabela à direita.
+
+Para que haja uma junção entre tabelas, é preciso estabelecer um ***pivô*** de relacionamento entre os registros dessas tabelas (ATRAVÉS DE `CHAVES PRIMÁRIAS/ESTRANGEIRAS`)!
+
+~~~sql
+SELECT 
+  *
+FROM
+  tb_clientes LEFT JOIN tb_pedidos ON (tb_clientes.id_cliente=tb_pedidos.id_cliente);
+~~~
+
+### Exemplo 2 - associando `tb_produtos` e `tb_imagens`:
+
+~~~sql
+SELECT 
+  * 
+FROM 
+  tb_produtos LEFT JOIN tb_imagens ON (tb_produtos.id_produto = tb_imagens.id_produto);
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula008" align="center">
+<h2>Aula 08: JOIN - Junção à direita (RIGHT JOIN).</h2>
+</div>
