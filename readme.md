@@ -1136,9 +1136,9 @@ No DER:
 
 ~~~sql
 CREATE TABLE tb_clientes(
-	id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(100) NOT NULL,
-  idade INT (3) NOT NULL
+    id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    idade INT (3) NOT NULL
 );
 ~~~
 
@@ -1146,10 +1146,10 @@ CREATE TABLE tb_clientes(
 
 ~~~sql
 CREATE TABLE tb_pedidos(
-	id_pedido INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  id_cliente INT NOT NULL,
-  FOREIGN KEY (id_cliente) REFERENCES tb_clientes(id_cliente),
-  data_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    id_pedido INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES tb_clientes(id_cliente),
+    data_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ~~~
 
@@ -1157,10 +1157,10 @@ CREATE TABLE tb_pedidos(
 
 ~~~sql
 CREATE TABLE tb_pedidos_produtos(
-	id_pedido INT NOT NULL,
-  id_produto INT NOT NULL,
-  FOREIGN KEY(id_pedido) REFERENCES tb_pedidos(id_pedido),
-  FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+    id_pedido INT NOT NULL,
+    id_produto INT NOT NULL,
+    FOREIGN KEY(id_pedido) REFERENCES tb_pedidos(id_pedido),
+    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
 );
 ~~~
 
@@ -1169,4 +1169,70 @@ CREATE TABLE tb_pedidos_produtos(
 
 <div id="aula005" align="center">
 <h2>Aula 05: Relacionamento Muitos para Muitos (populando tabelas).</h2>
+</div>
+
+### Inserindo dados:
+
+a) Inserindo cliente:
+
+~~~sql
+INSERT INTO tb_clientes(nome, idade) VALUES('Mônica', 31);	
+~~~
+
+b) Incluindo um pedido para este cliente:
+~~~sql
+INSERT INTO tb_pedidos(id_cliente) VALUES(1);	
+~~~
+
+c) Inserindo pedidos de produtos:
+
+~~~sql
+INSERT INTO tb_pedidos_produtos(id_pedido, id_produto) VALUES(1, 2);
+~~~
+
+d) Incluindo um segundo produto ao pedido:
+
+~~~sql
+INSERT INTO tb_pedidos_produtos(id_pedido, id_produto) VALUES(1, 3);
+~~~
+
+### E agora, na ordem inversa:
+
+a) Adicionando novo pedido (ao mesmo cliente):
+
+~~~sql
+INSERT INTO tb_pedidos(id_cliente) VALUES(1);
+~~~
+
+b) Vinculando novo produto ao pedido:
+
+~~~sql
+INSERT INTO tb_pedidos_produtos(id_pedido, id_produto) VALUES(2,3);
+~~~
+
+### Adicionando novo cliente:
+
+a) Adicionando cliente:
+
+~~~sql
+INSERT INTO tb_clientes(nome, idade) VALUES('João', 43);
+~~~
+
+d) Criando um novo pedido para este cliente:
+
+~~~sql
+INSERT INTO tb_pedidos(id_cliente) VALUES(2);
+~~~
+
+e) Relacionar o pedido com o produto:
+
+~~~sql
+INSERT INTO tb_pedidos_produtos(id_pedido, id_produto) VALUES(3,1);
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula006" align="center">
+<h2>Aula 06: Introdução às Junções (JOINS) entre tabelas.</h2>
 </div>
