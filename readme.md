@@ -5,7 +5,7 @@
 <p>Curso Desenvolvimento Web Completo 2022</p>
 </div>
 
-<div align="justify">
+<div id="conteudo" align="justify">
 
 ## Conteúdo
      
@@ -69,7 +69,8 @@ Funciona como uma `interface entre as aplicações e os dados`, sendo o seu prin
 Basicamente, o SGBD fornece uma API para as aplicações, para que tenham acesso aos dados persistidos no servidor, sendo essa comunicação realizada entre as aplicações e o SGBD feita através da linguagem SQL!
 
 Banco de Dados consistem em estruturas de dados organizadas em tabelas, que contém os registros, e esses registros estão relacionados entre essas tabelas.
-  
+
+<a href="#conteudo">Voltar ao topo.</a><br>
 <hr>
 
 <div id="aula02" align="center">
@@ -102,6 +103,7 @@ Pode ser dividida em cinco subcategorias e instruções com objetivos específic
     - Linguagem de Consulta de Dados 
     - permite recuperar dados através do estabelecimento de cláusulas, de operações lógicas, relacionais ou de funções de agragação.
 
+<a href="#conteudo">Voltar ao topo.</a><br>
 <hr>
 
 <div id="aula03" align="center">
@@ -123,6 +125,9 @@ Pode ser dividida em cinco subcategorias e instruções com objetivos específic
 - À direita, informações a respito do servidor do BD e do servidor web, e alguns links para documentação e informações do PHPMyAdmin.
 
 > No curso, trabalhamos com MariaDB, uma extensão do MySQL, uma branch open source!
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula04" align="center">
 <h2>Aula 04: Criando e excluindo Bancos de Dados.</h2>
@@ -185,6 +190,9 @@ Para excluir um BD:
 1. Menu Operações.
 2. Clicar em "Apagar a Base de Dados".
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula05" align="center">
 <h2>Aula 05: Tabelas e tipos de dados parte 1 - Um pouco de teoria.</h2>
 </div>
@@ -228,6 +236,9 @@ c) Campos de data e hora:
 - `datetime`: combinação entre date e time em um mesmo campo.
 
 > Indicar o tipo de campo corretamente permite trabalhar com funções nativas do SGBD!
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula06" align="center">
 <h2>Aula 06: Tabelas e tipos de dados parte 2 - Partindo para prática.</h2>
@@ -276,6 +287,9 @@ CREATE TABLE tb_cursos (
 DROP TABLE tb_cursos;
 ~~~
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula07" align="center">
 <h2>Aula 07: Extra - Entendendo a diferença entre os tipos de dados char e varchar.</h2>
 </div>
@@ -299,6 +313,9 @@ Exemplo:
 - Char (10 posições): M O N I C A _ _ _ _
 - Varchar (10 posições): M O N I C A
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula08" align="center">
 <h2>Aula 08: Editando nome de tabelas.</h2>
 </div>
@@ -314,6 +331,9 @@ b) Intrução DDL do MySQL:
 RENAME TABLE <nome_atual> TO <nome_novo>;
 /* em seguida, atualizar a aplicação (botão Reload)!
 ~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula09" align="center">
 <h2>Aula 09: Incluindo, editando e removendo colunas de tabelas.</h2>
@@ -377,6 +397,9 @@ c) Exclusão de coluna:
 ALTER TABLE nome_da_tabela DROP nome_da_coluna;
 ~~~
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula10" align="center">
 <h2>Aula 10: INSERT - Inserindo dados em tabela.</h2>
 </div>
@@ -395,6 +418,9 @@ ALTER TABLE nome_da_tabela DROP nome_da_coluna;
 ~~~sql
 INSERT INTO nome_da_tabela (coluna1, coluna2, coluna3) VALUES (valor_col1, valor_col2, valor_col3);
 ~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula11" align="center">
 <h2>Aula 11: SELECT - Consultando dados.</h2>
@@ -420,6 +446,9 @@ SELECT * FROM <tabela>;
 ~~~
 
 Atentar-se ao tamanho do BD e quantidade de dados antes de utiliza-lo - verificar se vale a pena!
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula12" align="center">
 <h2>Aula 12: Filtrando registros (WHERE).</h2>
@@ -465,6 +494,9 @@ OR | Pelo menos 1 das condições de operação deve ser verdadeira.
 
 </div>
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula13" align="center">
 <h2>Aula 13: Populando o banco de dados com registros para testes.</h2>
 </div>
@@ -479,6 +511,9 @@ INSERT INTO `tabela` (`col1`,`col2`,`col3`) VALUES (1,"Jorden",47), (2,"Lacey",5
 ~~~
 
 Obs: "syntax sugar" = sintaxe dentro da linguagem que tem por finalidade tornar suas construções mais fáceis de serem lidas e expressas.
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula14" align="center">
 <h2>Aula 14: SELECT - Filtros com Operadores de Comparação.</h2>
@@ -513,6 +548,9 @@ Operadores | Função
 
 </div>
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula15" align="center">
 <h2>Aula 15: SELECT - Filtros com Operadores Lógicos.</h2>
 </div>
@@ -541,6 +579,9 @@ WHERE
 	interesse = 'Jogos' AND idade >= 30;
 ~~~
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula16" align="center">
 <h2>Aula 16: SELECT - Filtros com o operador BETWEEN.</h2>
 </div>
@@ -555,6 +596,9 @@ FROM
 WHERE 
 	idade BETWEEN  18 AND 21;
 ~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula17" align="center">
 <h2>Aula 17: SELECT - Filtros com o operador IN.</h2>
@@ -592,6 +636,9 @@ FROM
 WHERE 
 	interesse NOT IN ('Jogos', 'Música', 'Esportes');
 ~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula18" align="center">
 <h2>Aula 18: SELECT - Filtros com o operador LIKE.</h2>
@@ -649,6 +696,8 @@ WHERE
 /* pesquisa palavra que inicia com I e tem 2 caracteres indef. à dir. */
 ~~~
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula19" align="center">
 <h2>Aula 19: SELECT - Ordenando resultado.</h2>
@@ -673,6 +722,9 @@ Sendo os pivôs de ordenação de resultados:
 
 - `ASC`: Ascending (ascendente). É o default, caso não coloquemos a informação de ASC ou DESC!
 - `DESC`: Descending (descendente).
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula20" align="center">
 <h2>Aula 20: SELECT - Limitando retorno.</h2>
@@ -724,6 +776,9 @@ Quando definimos o ***OFFSET***, serão retornados os registros a partir de seu 
 - Exemplo: em OFFSET = 4, retornará os dados a partir do 4° registro - incluindo o valor do 4° registro)!
 - É MUITO IMPORTANTE lembrar que, no BD, o primeiro registro ocupará a posição 0 (zero)!
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula21" align="center">
 <h2>Aula 21: SELECT - Funções de agregação parte 1: MAX, MIN e AVG.</h2>
 </div>
@@ -751,6 +806,9 @@ Sendo:
 
 > A operação `TRUNCATE <tabela>` limpa todos os registros existentes dentro da tabela!!!
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula22" align="center">
 <h2>Aula 22: SELECT - Funções de agregação parte 2: SUM e COUNT.</h2>
 </div>
@@ -771,6 +829,9 @@ Sendo:
 1. `SUM(<coluna>)`: retorna a **soma** dos valores de todos os registros com base em uma coluna.
 
 2. `COUNT(*)`: retorna a **quantidade** de todos os registros de uma tabela.
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula23" align="center">
 <h2>Aula 23: SELECT - Agrupando seleção de registros (GROUP BY).</h2>
@@ -799,6 +860,9 @@ LIMIT
   <offset>, <limit>
 ~~~ 
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula24" align="center">
 <h2>Aula 24: SELECT - Filtrando seleções agrupadas (HAVING).</h2>
 </div>
@@ -826,6 +890,9 @@ LIMIT
 
 Observação: no MySQL podemos utilizar `!=` ou `<>` para indicar "diferente".
 
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
 <div id="aula25" align="center">
 <h2>Aula 25: UPDATE - Atualizando registros.</h2>
 </div>
@@ -844,6 +911,9 @@ WHERE
 ~~~
 
 O **WHERE** especifica qual o registro ou conjunto de registros que serão afetados pela instrução de atualização!
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula26" align="center">
 <h2>Aula 26: DELETE - Excluindo registros.</h2>
@@ -865,6 +935,9 @@ WHERE
 Caso tenha dúvidas sobre quais registros serão afetados pelo DELETE, podemos ***simular a pesquisa*** clicando no botão na parte inferior da tela!!!
 
 Um detalhe interessante é que geralmente os registros não são removidos. Normalmente, opta-se por fazer a atualização no registro, modificando alguma coluna que indique seu estado (ativo/inativo). Geralmente são mantidos para fins de log/histórico.
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
 
 <div id="aula27" align="center">
 <h2>Aula 27: Introdução ao relacionamento entre tabelas, chave primária e estrangeira.</h2>
@@ -972,6 +1045,7 @@ CREATE TABLE td_descricoes_tecnicas (
 
 > ***Importante:*** a instrução `FOREIGN KEY()` recebe como parâmetro o nome da coluna que será usada nesta tabela como chave estrangeira, e na sequência, sua referência (de onde vem e para onde vai), através da palavra reservada REFERENCES.
 
+<a href="#conteudo">Voltar ao topo.</a><br>
 <hr>
 
 <div id="aula002" align="center">
@@ -983,7 +1057,7 @@ Nesta aula, serão inseridos registros nas tabelas (populando-as).
 Começar os INSERTs pela tabela tb_produtos, pois tb_descricoes_tecnicas depende da existência da chave estrangeira!
 
 ~~~sql
-// em tb_produtos
+/* em tb_produtos */
 
 INSERT INTO tb_produtos(produto, valor) VALUES ('Notebook Dell Inspiron Ultrafino Intel Core i7, 16GB RAM e 240GB SSD', 3500.00);
 
@@ -993,7 +1067,7 @@ INSERT INTO tb_produtos(produto, valor) VALUES ('Smartphone LG K10 Dual Chip And
 ~~~
 
 ~~~sql
-// em tb_descricoes_tecnicas
+/* em tb_descricoes_tecnicas */
 
 INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O novo Inspiron Dell oferece um design elegante e tela infinita que amplia seus sentidos, mantendo a sofisticação e medidas compactas...');
 
@@ -1002,8 +1076,47 @@ INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, 'A 
 INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'Saia da mesmice. O smartphone LG está mais divertido, rápido, fácil, cheio de selfies e com tela HD de incríveis 5,3"...');
 ~~~
 
+<a href="#conteudo">Voltar ao topo.</a><br>
 <hr>
 
 <div id="aula003" align="center">
-<h2>Aula 03: Utilizando o PHPMyAdmin para manipulação do MySQL.</h2>
+<h2>Aula 03: Relacionamento Um para Muitos.</h2>
+</div>
+
+O tipo de relacionamento "um para muitos" é muito frequente!
+
+Nesta aula, criaremos a tabela tb_imagens, que armazenará 1 a n imagens de cada produto, como no DER abaixo:
+
+<br>
+<div align="center">
+<img src="./assets/diagrama-entidade-relacionamento-1pn.png" width="80%"/>
+<br>
+
+1. Criando a tabela `tb_imagens`:
+
+~~~sql
+CREATE TABLE tb_imagens (
+    id_imagem INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT NOT NULL,
+    FOREIGN KEY (id_produto) REFERENCES tb_produtos(id_produto),
+    url_imagem VARCHAR(200) NOT NULL
+);
+~~~
+
+2. Inserindo dados:
+
+~~~sql
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES (1, 'notebook_1.jpg'), (1, 'notebook_2.jpg'),
+(1, 'notebook_3.jpg');
+
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES (2, 'smarttv_1.jpg'), (2, 'smarttv_2.jpg');
+
+INSERT INTO tb_imagens(id_produto, url_imagem) VALUES (3, 'smartphone_1.jpg');
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula004" align="center">
+<h2>Aula 04: Relacionamento Muitos para Muitos.</h2>
 </div>
