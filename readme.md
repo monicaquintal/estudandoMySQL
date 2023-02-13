@@ -1450,7 +1450,8 @@ ORDER BY
 
 ### Atividades para fixação do conteúdo:
 
-1) Selecione todos os clientes com idade igual ou superior a 29. Os registros devem ser ordenados de forma ascendente pela idade.
+1) Selecione todos os clientes com idade igual ou superior a 29. 
+Os registros devem ser ordenados de forma ascendente pela idade.
 
 ~~~sql
 SELECT 
@@ -1465,7 +1466,7 @@ ORDER BY
 
 2) Utilize instruções do subconjunto DDL do SQL para realizar a inclusão das colunas abaixo na tabela tb_clientes:
 
-- Adicine a coluna “sexo” do tipo string com tamanho fixo de 1 caractere. Coluna não pode ser vazia na inserção.
+- Adicione a coluna “sexo” do tipo string com tamanho fixo de 1 caractere. Coluna não pode ser vazia na inserção.
 
 ~~~sql
 ALTER TABLE tb_clientes ADD COLUMN sexo CHAR(1) NOT NULL;
