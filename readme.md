@@ -1315,3 +1315,66 @@ Neste caso, como a prioridade será a tabela tb_pedidos, não ocorrerá o retorn
 <div id="aula009" align="center">
 <h2>Aula 09: JOIN - Junção interna (INNER JOIN).</h2>
 </div>
+
+O `INNER JOIN` prioriza o retorno dos registros cujo relacionamento seja estabelecido. Ou seja, trará apenas registros que se relacionarem entre si.
+
+### Inserindo mais um produto:
+
+~~~sql
+INSERT INTO tb_produtos(produto, valor) VALUES ('HD Externo Portátil Seagate Expansion 1TB USB 3.0', 274.90);
+~~~
+
+Como ter acesso a uma relação de pedidos conectados, caso exista, a relaçãod e produtos daqueles pedidos?
+
+### Opção 1: Junção à esquerda
+
+~~~sql
+SELECT
+  * 
+FROM 
+  tb_pedidos LEFT JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido);
+~~~
+
+Relaciona tb_pedidos com tb_pedidos_produtos, mas não a descrição do produto. Portando, podemos fazer mais uma LEFT JOIN para exibir as descrições:
+
+~~~sql
+SELECT 
+  * 
+FROM 
+  tb_pedidos LEFT JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido) LEFT JOIN tb_produtos ON (tb_pedidos_produtos.id_produto = tb_produtos.id_produto);
+~~~
+
+Isso gera um resultado mais completo, que inclui relação de todos os pedidos, também inclui a relação de todos os produtos dos pedidos, e em função do 2° LEFT JOIN, os dados dos produtos.
+
+### Opção 2: Junção à direita
+
+~~~sql
+SELECT 
+  * 
+FROM 
+  tb_pedidos RIGHT JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido) LEFT JOIN tb_produtos ON (tb_pedidos_produtos.id_produto = tb_produtos.id_produto)
+~~~
+
+### Opção 3: Junção interna
+
+Prioriza as ***relações*** entre tabelas/registros!
+
+Entre duas tabelas (tb_pedidos e tb_pedidos_produtos):
+
+~~~sql
+SELECT * FROM tb_pedidos INNER JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido);
+~~~
+
+Entre 3 tabelas (tb_pedidos, tb_pedidos_produtos e tb_produtos):
+
+~~~sql
+SELECT * FROM tb_pedidos INNER JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido = tb_pedidos_produtos.id_pedido) INNER JOIN tb_produtos ON (tb_pedidos_produtos.id_produto = tb_produtos.id_produto)
+
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula010" align="center">
+<h2>Aula 10: Alias - Apelidando tabelas.</h2>
+</div>
