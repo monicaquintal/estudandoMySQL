@@ -1378,3 +1378,72 @@ SELECT * FROM tb_pedidos INNER JOIN tb_pedidos_produtos ON (tb_pedidos.id_pedido
 <div id="aula010" align="center">
 <h2>Aula 10: Alias - Apelidando tabelas.</h2>
 </div>
+
+### Para selecionar todos os produtos e suas descrições técnicas:
+
+~~~sql
+SELECT 
+  * 
+FROM 
+  tb_produtos LEFT JOIN tb_descricoes_tecnicas ON (tb_produtos.id_produto = tb_descricoes_tecnicas.id_produto);
+~~~
+
+### E como os apelidos funcionam?
+
+Utilizamos a palavra reservada `AS`, e na sequência, incluímos seu apelido, como no exemplo:
+
+~~~sql
+SELECT 
+  * 
+FROM 
+  tb_produtos AS p LEFT JOIN tb_descricoes_tecnicas AS dt ON (p.id_produto = dt.id_produto);
+~~~
+
+### Selecionando id produto, nome, valor e descrição técnica:
+
+~~~sql
+SELECT 
+  p.id_produto, 
+  p.produto, 
+  p.valor, 
+  dt.descricao_tecnica 
+FROM 
+  tb_produtos AS p LEFT JOIN tb_descricoes_tecnicas AS dt ON (p.id_produto = dt.id_produto);
+~~~
+
+### Aplicando filtros:
+
+~~~sql
+SELECT 
+  p.id_produto, 
+  p.produto, 
+  p.valor, 
+  dt.descricao_tecnica 
+FROM 
+  tb_produtos AS p LEFT JOIN tb_descricoes_tecnicas AS dt ON (p.id_produto = dt.id_produto) 
+WHERE 
+  p.valor >= 500;
+~~~
+
+### Ordenando os resultados com base no valor:
+
+~~~sql
+SELECT 
+  p.id_produto, 
+  p.produto, 
+  p.valor, 
+  dt.descricao_tecnica 
+FROM 
+  tb_produtos AS p LEFT JOIN tb_descricoes_tecnicas AS dt ON (p.id_produto = dt.id_produto) 
+WHERE 
+  p.valor >= 500 
+ORDER BY 
+  p.valor ASC;
+~~~
+
+<a href="#conteudo">Voltar ao topo.</a><br>
+<hr>
+
+<div id="aula011" align="center">
+<h2>Aula 11: Considerações finais da seção + Atividades extra.</h2>
+</div>
